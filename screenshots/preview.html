@@ -1,0 +1,34 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <style>
+        .container {
+          position: relative;
+          width: fit-content;
+        }
+        .main-img {
+          position: relative;
+          z-index: 1;
+        }
+        .hover-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.3s;
+          z-index: 2;
+        }
+        .container:hover .hover-img {
+          opacity: 1;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <img src="https://csdnkangge.github.io/tianti2/screenshots/加菲猫.png" class="main-img" width="800"/>
+        <img src="https://csdnkangge.github.io/tianti2/screenshots/加菲猫_hover.png" class="hover-img" width="800"/>
+      </div>
+    </body>
+    </html>
+    
