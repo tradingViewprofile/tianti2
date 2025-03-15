@@ -1,0 +1,66 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>安全预览 | 令牌: g3T5Bz9K</title>
+    <style>
+      body {
+        background: url('https://csdnkangge.github.io/tianti2/assets/bg.png') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        position: relative;
+        width: fit-content;
+        margin: 2rem auto;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      }
+      .main-img {
+        position: relative;
+        z-index: 1;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+      .hover-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+        border-radius: 8px;
+      }
+      .container:hover .hover-img {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://csdnkangge.github.io/tianti2/加菲猫.png?token=g3T5Bz9K" 
+           class="main-img" 
+           width="800"
+           alt="安全主视图">
+      <img src="https://csdnkangge.github.io/tianti2/加菲猫_hover.png?token=g3T5Bz9K"
+           class="hover-img"
+           width="800"
+           alt="安全悬停视图">
+    </div>
+    <script>
+      // 安全验证
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('token') !== 'g3T5Bz9K') {
+        document.body.innerHTML = '<div style="padding:50px;text-align:center;background:white;">' +
+          '<h1 style="color:red">⛔ 非法访问</h1>' +
+          '<p>访问日志已记录</p></div>';
+      }
+    </script>
+  </body>
+  </html>
+  
