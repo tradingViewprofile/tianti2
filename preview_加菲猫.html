@@ -1,0 +1,65 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>安全预览 | 令牌: 加菲猫</title>
+    <style>
+      body {
+      background: #f0f0f0;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      }
+      .container {
+      position: relative;
+      width: fit-content;
+      margin: 2rem auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      }
+      .main-img {
+        position: relative;
+        z-index: 1;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+      .hover-img {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        opacity: 0;
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+        border-radius: 8px;
+      }
+      .container:hover .hover-img {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://csdnkangge.github.io/tianti2/ruyi.png?token=加菲猫" 
+           class="main-img" 
+           width="900px"
+           alt="安全主视图">
+      <img src="https://csdnkangge.github.io/tianti2/ruyi_hover.png?token=加菲猫"
+           class="hover-img"
+           width="900px"
+           alt="安全悬停视图">
+    </div>
+    <script>
+      // 安全验证
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('token') !== '加菲猫') {
+        document.body.innerHTML = '<div style="padding:50px;text-align:center;background:white;">' +
+          '<h1 style="color:red">⛔ 非法访问</h1>' +
+          '<p>访问日志已记录</p></div>';
+      }
+    </script>
+  </body>
+  </html>
+  
